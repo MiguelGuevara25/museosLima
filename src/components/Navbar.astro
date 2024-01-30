@@ -1,5 +1,9 @@
+---
+import "animate.css";
+---
+
 <nav
-  class="bg-[#FFA836] text-white py-6 flex items-center justify-evenly font-bold fixed rounded-b-[35px] w-full [&>span]:text-xl z-10 navbar"
+  class="bg-[#FFA836] text-white py-6 flex items-center justify-evenly font-bold fixed rounded-b-[35px] w-full [&>span]:text-xl z-10 animate__animated animate__fadeInDown"
 >
   <a href="/">
     <img src="/favicon.svg" alt="Logo" />
@@ -24,15 +28,17 @@
 
 <style>
   .navbar {
-    animation: identifier ease-in-out 1s;
+    animation: identifier 1s;
   }
 
   @keyframes identifier {
     from {
-      transform: translateY(-100%);
+      transform: translateY(-50%);
+      opacity: 0;
     }
     to {
       transform: translateY(0%);
+      opacity: 1;
     }
   }
 </style>
