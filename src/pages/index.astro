@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import CarouselRecorridos from "../components/CarouselRecorridos";
+import CarouselPublicaciones from "../components/CarouselPublicaciones";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Museos en Línea">
+  <Header />
+  <main>
+    <section class="w-3/4 mx-auto my-16">
+      <p class="font-bold text-2xl pb-16 text-center">
+        ¡Atrévete a descubrir todos los Museos<br />que Perú tiene para
+        ofrecerte!
+      </p>
+
+      <span class="text-2xl text-[#FFA836]">Conócenos</span>
+      <h2 class="text-[40px] text-[#553000]">¿Quiénes somos?</h2>
+      <p class="text-2xl">
+        La Dirección General de Museos es el órgano del Ministerio de Cultura
+        responsable de la gestión de los museos y del patrimonio cultural
+        mueble.
+      </p>
+    </section>
+
+    <section class="mb-32">
+      <h2 class="text-center mb-20 font-semibold text-[40px] text-[#553000]">
+        Recorridos Virtuales
+      </h2>
+
+      <CarouselRecorridos client:load />
+    </section>
+
+    <section>
+      <h2 class="text-center mb-20 font-semibold text-[40px] text-[#553000]">
+        Últimas Publicaciones
+      </h2>
+
+      <CarouselPublicaciones client:load />
+    </section>
+
+    <section class="my-24">
+      <div class="[&>span]:text-[#FFA836] [&>span]:font-semibold w-3/4 mx-auto mb-10">
+        <span>¿Quieres conocer más?</span>
+        <h2 class="text-[#553000] text-4xl font-semibold my-2">Suscríbete</h2>
+        <span>Y recibe novedades de los museos cada semana</span>
+      </div>
+
+      <form
+        class="[&>input]:bg-[#EEEEEE] [&>input]:rounded-xl [&>input]:shadow-md flex flex-col gap-6 max-w-xl mx-auto [&>input]:px-8 [&>input]:py-2"
+      >
+        <input
+          class="placeholder:text-[#553000] placeholder:font-bold"
+          type="text"
+          placeholder="Nombre y Apellidos"
+        />
+        <input
+          class="placeholder:text-[#553000] placeholder:font-bold"
+          type="text"
+          placeholder="Correo electrónico:"
+        />
+        <input
+          class="placeholder:text-[#553000] placeholder:font-bold"
+          type="text"
+          placeholder="Teléfono / Celular:"
+        />
+
+        <button
+          class="bg-[#FFA836] font-bold text-white shadow-md w-max px-4 py-2 rounded-2xl self-center mt-5"
+          >Suscribirse</button
+        >
+      </form>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
