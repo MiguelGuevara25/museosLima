@@ -1,0 +1,38 @@
+<nav
+  class="bg-[#FFA836] text-white py-6 flex items-center justify-evenly font-bold fixed rounded-b-[35px] w-full [&>span]:text-xl z-10 navbar"
+>
+  <a href="/">
+    <img src="/favicon.svg" alt="Logo" />
+  </a>
+
+  <a href="/">
+    <span>Inicio</span>
+  </a>
+
+  <a href="/museos">
+    <span>Museos</span>
+  </a>
+
+  <a href="/">
+    <span>Gestión de Colecciones</span>
+  </a>
+
+  <a href="/">
+    <span>Conoce más</span>
+  </a>
+</nav>
+
+<style>
+  .navbar {
+    animation: identifier ease-in-out 1s;
+  }
+
+  @keyframes identifier {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+</style>

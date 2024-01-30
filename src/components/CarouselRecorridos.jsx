@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -54,10 +54,14 @@ const CarouselRecorridos = () => {
       slidesPerView={7}
       spaceBetween={30}
       freeMode={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       pagination={{
         clickable: true,
       }}
-      modules={[FreeMode, Pagination]}
+      modules={[Autoplay, FreeMode, Pagination]}
       className="mySwiper [&>div>div]:mb-16 [&>div>span]:bg-[#FFA836]"
     >
       {imagesCarousel.map((datos, id) => {
