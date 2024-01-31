@@ -1,9 +1,10 @@
 ---
 import "animate.css";
+let id = Astro.url.pathname;
 ---
 
 <nav
-  class="bg-[#FFA836] text-white py-6 flex items-center justify-evenly font-bold fixed rounded-b-[35px] w-full [&>span]:text-xl z-10 animate__animated animate__fadeInDown"
+  class=`bg-[#FFA836] text-white py-6 flex items-center justify-evenly font-bold ${id === "/" ? "fixed" : "sticky top-0"} rounded-b-[35px] w-full [&>span]:text-xl z-10 animate__animated animate__fadeInDown`
 >
   <a href="/">
     <img src="/favicon.svg" alt="Logo" />
@@ -17,11 +18,11 @@ import "animate.css";
     <span>Museos</span>
   </a>
 
-  <a href="/">
+  <a href="/gestioncolecciones">
     <span>Gestión de Colecciones</span>
   </a>
 
-  <a href="/">
+  <a href="/conocemas">
     <span>Conoce más</span>
   </a>
 </nav>

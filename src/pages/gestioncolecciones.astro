@@ -1,0 +1,61 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+
+const dataGestion = [
+  {
+    title: "Documentación:",
+    text: "Desde la Dirección General de Museos se desarrollan diversas herramientas para la adecuada documentación de los bienes culturales muebles, a nivel de gestión de colecciones como de identificación del patrimonio cultural mueble.",
+    image: "/collectionGestion/documentation.png",
+  },
+  {
+    title: "Conservación:",
+    text: "La conservación es el tratamiento que recibe un objeto para eliminar todo proceso de degradación que pueda deteriorarlo, para protegerlo ante futuras alteraciones, aceptando el paso del tiempo (patina) de la obra.",
+    image: "/collectionGestion/conservation.jpg",
+  },
+  {
+    title: "Exposición:",
+    text: "Desde la Dirección General de Museos se organizan exposiciones y se realizan las gestiones para el préstamos de bienes culturales muebles con fines de exposición.",
+    image: "/collectionGestion/exposition.jpg",
+  },
+  {
+    title: "Investigación:",
+    text: "Las colecciones de los museos del Ministerio de Cultura se encuentran a disposición de los investigadores que pueden acceder a través de la ejecución de proyectos de investigación de colecciones y fondos museográficos.",
+    image: "/collectionGestion/investigation.jpg",
+  },
+];
+---
+
+<Layout title="Gestión de Colecciones - Museos en Línea">
+  <Navbar />
+  <main class="w-3/4 mx-auto">
+    <h2 class="text-4xl font-semibold py-20 text-center">
+      Gestión de Colecciones
+    </h2>
+
+    <section class="flex flex-col gap-11">
+      {
+        dataGestion.map(({ title, text, image }) => {
+          return (
+            <div class="flex gap-36 justify-between">
+              <div class="w-1/2">
+                <h3 class="font-bold text-2xl mb-1">{title}</h3>
+                <p class="font-bold text-xl">{text}</p>
+              </div>
+
+              <div>
+                <div class="w-[360px] h-[304px] overflow-hidden rounded-2xl">
+                  <img
+                    src={image}
+                    class="w-full h-full object-cover rounded-2xl brightness-75 hover:brightness-100 scale-125 hover:scale-100 transition-all duration-500"
+                    alt="imagen"
+                  />
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </section>
+  </main>
+</Layout>
