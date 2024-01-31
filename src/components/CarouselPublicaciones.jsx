@@ -7,44 +7,44 @@ import "swiper/css/pagination";
 const CarouselPublicaciones = () => {
   const imagesPublicaciones = [
     {
-      img: "/imgCarouselHome/museoPeañas.jpg",
+      img: "/imgCarouselHome/museoPeañas.webp",
       name: "Museo de Peañas",
     },
     {
-      img: "/imgCarouselHome/museoHistoricoTacna.jpg",
+      img: "/imgCarouselHome/museoHistoricoTacna.webp",
       name: "Museo Histórico Regional de Tacna",
     },
     {
-      img: "/imgCarouselHome/museoPachacamac.jpg",
+      img: "/imgCarouselHome/museoPachacamac.webp",
       name: "Museo de sitio Pachacamac",
     },
     {
-      img: "/imgCarouselHome/museoGastronomia.jpg",
+      img: "/imgCarouselHome/museoGastronomia.webp",
       name: "Museo de la Gastronomía",
     },
     {
-      img: "/imgCarouselHome/museoMariategui.jpg",
+      img: "/imgCarouselHome/museoMariategui.webp",
       name: "Museo “José Carlos Mariátegui”",
     },
 
     {
-      img: "/imgCarouselHome/museoPeañas.jpg",
+      img: "/imgCarouselHome/museoPeañas.webp",
       name: "Museo de Peañas",
     },
     {
-      img: "/imgCarouselHome/museoHistoricoTacna.jpg",
+      img: "/imgCarouselHome/museoHistoricoTacna.webp",
       name: "Museo Histórico Regional de Tacna",
     },
     {
-      img: "/imgCarouselHome/museoPachacamac.jpg",
+      img: "/imgCarouselHome/museoPachacamac.webp",
       name: "Museo de sitio Pachacamac",
     },
     {
-      img: "/imgCarouselHome/museoGastronomia.jpg",
+      img: "/imgCarouselHome/museoGastronomia.webp",
       name: "Museo de la Gastronomía",
     },
     {
-      img: "/imgCarouselHome/museoMariategui.jpg",
+      img: "/imgCarouselHome/museoMariategui.webp",
       name: "Museo “José Carlos Mariátegui”",
     },
   ];
