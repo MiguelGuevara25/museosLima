@@ -1,0 +1,39 @@
+---
+const img = [
+  {
+    src: "/asociacionMuseos.jpg",
+    title: "Asociación de Museos",
+  },
+  {
+    src: "/ibermuseos.jpg",
+    title: "IBERMUSEOS",
+  },
+  {
+    src: "/consejoInternacionalMuseos.webp",
+    title: "Consejo Internacional de Museos",
+  },
+];
+---
+
+<section>
+  <h2 class="text-center">Enlaces de interés</h2>
+  <p class="text-center">
+    Conoce diversas instituciones nacionales e internacionales comprometidas con
+    la protección y difusión del patrimonio cultural desde el ámbito de los
+    museos.
+  </p>
+
+  <div class="flex justify-evenly">
+    {
+      img.map(({ src, title }) => (
+        <div class="w-80 overflow-hidden rounded-[32px]">
+          <img
+            src={src}
+            class="w-full h-full scale-125 brightness-50 hover:brightness-75 hover:scale-100 transition-all duration-300"
+            alt={title}
+          />
+        </div>
+      ))
+    }
+  </div>
+</section>
