@@ -1,9 +1,52 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { imagesMuseos } from "../data/data";
 ---
 
 <Layout title="Museos - Museos en Línea">
   <Navbar />
-  <h1>Lo wachos ahora están haciendo plata</h1>
+  <main class="w-4/5 mx-auto my-28">
+    <section class="grid grid-cols-3 place-items-center gap-y-24">
+      {
+        imagesMuseos.map((info) => {
+          return (
+            <div>
+              <div class="overflow-hidden w-[372px] h-[578px] relative rounded-3xl">
+                <img
+                  src={info.img}
+                  alt={info.title}
+                  class="w-full h-full object-cover brightness-50 hover:brightness-75 scale-125 hover:scale-100 transition-all duration-500 rounded-3xl"
+                />
+
+                <div class="absolute bottom-10 left-10 text-white">
+                  <h3 class="font-bold mb-3 text-2xl w-64">{info.title}</h3>
+                  <p class="mb-8">{info.text}</p>
+                  <span class="font-bold text-xl">Explora</span>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+
+      <div class="w-[372px] h-[578px] flex flex-col justify-end pb-7">
+        <h3 class="font-bold text-2xl text-[#553000]">
+          ¿Y tú? ¿Tienes algún museo que te gustaría inscribir?
+        </h3>
+        <p>
+          Dale click a “Inscribe tu museo" y conoce los pasos correspondientes
+          para poder inscribirte.
+        </p>
+
+        <button
+          class="bg-[#FFA836] text-white px-4 py-2 rounded-2xl mt-4 w-max shadow-md font-bold"
+        >
+          Inscribe tu museo
+        </button>
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Layout>

@@ -1,35 +1,14 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
-
-const dataGestion = [
-  {
-    title: "Documentación:",
-    text: "Desde la Dirección General de Museos se desarrollan diversas herramientas para la adecuada documentación de los bienes culturales muebles, a nivel de gestión de colecciones como de identificación del patrimonio cultural mueble.",
-    image: "/collectionGestion/documentation.webp",
-  },
-  {
-    title: "Conservación:",
-    text: "La conservación es el tratamiento que recibe un objeto para eliminar todo proceso de degradación que pueda deteriorarlo, para protegerlo ante futuras alteraciones, aceptando el paso del tiempo (patina) de la obra.",
-    image: "/collectionGestion/conservation.webp",
-  },
-  {
-    title: "Exposición:",
-    text: "Desde la Dirección General de Museos se organizan exposiciones y se realizan las gestiones para el préstamos de bienes culturales muebles con fines de exposición.",
-    image: "/collectionGestion/exposition.webp",
-  },
-  {
-    title: "Investigación:",
-    text: "Las colecciones de los museos del Ministerio de Cultura se encuentran a disposición de los investigadores que pueden acceder a través de la ejecución de proyectos de investigación de colecciones y fondos museográficos.",
-    image: "/collectionGestion/investigation.webp",
-  },
-];
+import Footer from "../components/Footer.astro";
+import { dataGestion } from "../data/data";
 ---
 
 <Layout title="Gestión de Colecciones - Museos en Línea">
   <Navbar />
-  <main class="w-3/4 mx-auto">
-    <h2 class="text-4xl font-semibold py-20 text-center">
+  <main class="w-3/4 mx-auto my-20">
+    <h2 class="text-4xl font-semibold mb-20 text-center">
       Gestión de Colecciones
     </h2>
 
@@ -44,12 +23,15 @@ const dataGestion = [
               </div>
 
               <div>
-                <div class="w-[360px] h-[304px] overflow-hidden rounded-2xl">
+                <div class="w-[360px] h-[304px] overflow-hidden rounded-2xl relative">
                   <img
                     src={image}
                     class="w-full h-full object-cover rounded-2xl brightness-75 hover:brightness-100 scale-125 hover:scale-100 transition-all duration-500"
                     alt="imagen"
                   />
+                  <span class="absolute bottom-10 left-10 text-white font-bold cursor-pointer">
+                    Conoce más aquí &rarr;
+                  </span>
                 </div>
               </div>
             </div>
@@ -58,4 +40,5 @@ const dataGestion = [
       }
     </section>
   </main>
+  <Footer />
 </Layout>

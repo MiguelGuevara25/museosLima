@@ -1,57 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
+import { imagesPublicaciones } from "../data/data";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 const CarouselPublicaciones = () => {
-  const imagesPublicaciones = [
-    {
-      img: "/imgCarouselHome/museoPeañas.webp",
-      name: "Museo de Peañas",
-    },
-    {
-      img: "/imgCarouselHome/museoHistoricoTacna.webp",
-      name: "Museo Histórico Regional de Tacna",
-    },
-    {
-      img: "/imgCarouselHome/museoPachacamac.webp",
-      name: "Museo de sitio Pachacamac",
-    },
-    {
-      img: "/imgCarouselHome/museoGastronomia.webp",
-      name: "Museo de la Gastronomía",
-    },
-    {
-      img: "/imgCarouselHome/museoMariategui.webp",
-      name: "Museo “José Carlos Mariátegui”",
-    },
-
-    {
-      img: "/imgCarouselHome/museoPeañas.webp",
-      name: "Museo de Peañas",
-    },
-    {
-      img: "/imgCarouselHome/museoHistoricoTacna.webp",
-      name: "Museo Histórico Regional de Tacna",
-    },
-    {
-      img: "/imgCarouselHome/museoPachacamac.webp",
-      name: "Museo de sitio Pachacamac",
-    },
-    {
-      img: "/imgCarouselHome/museoGastronomia.webp",
-      name: "Museo de la Gastronomía",
-    },
-    {
-      img: "/imgCarouselHome/museoMariategui.webp",
-      name: "Museo “José Carlos Mariátegui”",
-    },
-  ];
-
   return (
     <Swiper
-    
       slidesPerView={7}
       spaceBetween={30}
       freeMode={true}
