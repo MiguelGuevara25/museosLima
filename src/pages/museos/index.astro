@@ -1,8 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import { imagesMuseos } from "../data/data";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import { imagesMuseos } from "../../data/data";
 ---
 
 <Layout title="Museos - Museos en Línea">
@@ -13,7 +13,7 @@ import { imagesMuseos } from "../data/data";
         imagesMuseos.map((info) => {
           return (
             <div>
-              <div class="overflow-hidden w-[372px] h-[578px] relative rounded-3xl">
+              <div class="overflow-hidden w-[372px] h-[578px] relative rounded-3xl animate__animated animate__jackInTheBox">
                 <img
                   src={info.img}
                   alt={info.title}

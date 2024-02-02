@@ -1,8 +1,8 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
-import { dataGestion } from "../data/data";
+import Navbar from "../../components/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+import { dataGestion } from "../../data/data";
 ---
 
 <Layout title="Gestión de Colecciones - Museos en Línea">
@@ -17,13 +17,13 @@ import { dataGestion } from "../data/data";
         dataGestion.map(({ title, text, image }) => {
           return (
             <div class="flex gap-36 justify-between">
-              <div class="w-1/2">
+              <div class="w-1/2 animate__animated animate__fadeInLeft">
                 <h3 class="font-bold text-2xl mb-1">{title}</h3>
                 <p class="font-bold text-xl">{text}</p>
               </div>
 
               <div>
-                <div class="w-[360px] h-[304px] overflow-hidden rounded-2xl relative">
+                <div class="w-[360px] h-[304px] overflow-hidden rounded-2xl relative animate__animated animate__fadeInRight">
                   <img
                     src={image}
                     class="w-full h-full object-cover rounded-2xl brightness-75 hover:brightness-100 scale-125 hover:scale-100 transition-all duration-500"

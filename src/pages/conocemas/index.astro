@@ -4,13 +4,19 @@ import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
 import Activities from "./components/Activities.astro";
 import EnlaceInteres from "./components/EnlaceInteres.astro";
+import Normativa from "./components/Normativa.astro";
+import Homenaje from "./components/Homenaje.astro";
+import Estadisticas from "./components/Estadisticas.astro";
 ---
 
 <Layout title="Conoce Más - Museos en Línea">
   <Navbar />
-  <main class="w-11/12 mx-auto">
+  <main class="w-11/12 mx-auto my-[90px]">
     <Activities />
     <EnlaceInteres />
+    <Normativa />
+    <Homenaje />
+    <Estadisticas />
   </main>
   <Footer />
 </Layout>
