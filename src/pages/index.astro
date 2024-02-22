@@ -9,39 +9,53 @@ import Footer from "../components/Footer.astro";
 <Layout title="Inicio - Museos en Línea">
   <Header />
   <main>
-    <section class="w-3/4 mx-auto my-16">
+    <section class="w-3/4 mx-auto my-16 text-[#553000]">
       <p class="font-bold text-2xl pb-16 text-center">
         ¡Atrévete a descubrir todos los Museos<br />que Perú tiene para
         ofrecerte!
       </p>
 
-      <span class="text-2xl text-[#FFA836]">Conócenos</span>
-      <h2 class="text-[40px] text-[#553000]">¿Quiénes somos?</h2>
-      <p class="text-2xl">
+      <span class="lg:text-2xl text-[#FFA836] lg:font-normal font-bold"
+        >Conócenos</span
+      >
+      <h2 class="lg:text-4xl text-2xl lg:font-normal my-2 font-bold">
+        ¿Quiénes somos?
+      </h2>
+      <p class="lg:text-2xl text-sm lg:font-normal font-bold">
         La Dirección General de Museos es el órgano del Ministerio de Cultura
         responsable de la gestión de los museos y del patrimonio cultural
         mueble.
       </p>
     </section>
 
-    <section class="mb-32">
-      <h2 class="text-center mb-20 font-semibold text-[40px] text-[#553000]">
-        Recorridos Virtuales
-      </h2>
+    <section class="mb-32 text-[#553000]">
+      <div class="w-3/4 mx-auto">
+        <h2
+          class="lg:text-center lg:mx-auto lg:mb-20 mb-8 font-bold lg:text-[40px] text-2xl"
+        >
+          Recorridos Virtuales
+        </h2>
+      </div>
 
       <CarouselRecorridos client:load />
     </section>
 
-    <section>
-      <h2 class="text-center mb-20 font-semibold text-[40px] text-[#553000]">
-        Últimas Publicaciones
-      </h2>
+    <section class="text-[#553000]">
+      <div class="w-3/4 mx-auto">
+        <h2
+          class="lg:text-center lg:mx-auto lg:mb-20 mb-8 font-bold lg:text-[40px] text-2xl"
+        >
+          Últimas Publicaciones
+        </h2>
+      </div>
 
       <CarouselPublicaciones client:load />
     </section>
 
     <section class="my-24">
-      <div class="[&>span]:text-[#FFA836] [&>span]:font-semibold w-3/4 mx-auto mb-10">
+      <div
+        class="[&>span]:text-[#FFA836] [&>span]:font-semibold w-3/4 mx-auto mb-10"
+      >
         <span>¿Quieres conocer más?</span>
         <h2 class="text-[#553000] text-4xl font-semibold my-2">Suscríbete</h2>
         <span>Y recibe novedades de los museos cada semana</span>

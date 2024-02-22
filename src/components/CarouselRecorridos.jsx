@@ -8,8 +8,8 @@ import "swiper/css/pagination";
 const CarouselRecorridos = () => {
   return (
     <Swiper
-      slidesPerView={7}
-      spaceBetween={30}
+      slidesPerView={1}
+      spaceBetween={10}
       freeMode={true}
       autoplay={{
         delay: 2500,
@@ -18,8 +18,26 @@ const CarouselRecorridos = () => {
       pagination={{
         clickable: true,
       }}
+      breakpoints={{
+        "@0.00": {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        "@0.75": {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        "@1.00": {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        "@1.50": {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      }}
       modules={[Autoplay, FreeMode, Pagination]}
-      className="mySwiper [&>div>div]:mb-16 [&>div>span]:bg-[#FFA836]"
+      className="mySwiper w-4/5 mx-auto [&>div>div]:mb-16 [&>div>span]:bg-[#FFA836]"
     >
       {imagesCarousel.map((datos, id) => {
         return (
