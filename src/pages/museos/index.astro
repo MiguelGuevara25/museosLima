@@ -7,32 +7,34 @@ import { imagesMuseos } from "../../data/data";
 
 <Layout title="Museos - Museos en Línea">
   <Navbar />
-  <main class="w-4/5 mx-auto my-28">
-    <section class="grid grid-cols-3 place-items-center gap-y-24">
+  <main class="w-4/5 mx-auto my-16">
+    <section class="flex flex-wrap gap-y-14 justify-between">
       {
         imagesMuseos.map((info) => {
           return (
-            <div>
-              <div class="overflow-hidden w-[372px] h-[578px] relative rounded-3xl animate__animated animate__jackInTheBox">
-                <img
-                  src={info.img}
-                  alt={info.title}
-                  class="w-full h-full object-cover brightness-50 hover:brightness-75 scale-125 hover:scale-100 transition-all duration-500 rounded-3xl"
-                />
+            <div class="overflow-hidden h-[578px] relative rounded-3xl animate__animated animate__fadeIn lg:basis-[30%]">
+              <img
+                src={info.img}
+                alt={info.title}
+                class="w-full h-full object-cover brightness-50 hover:brightness-75 scale-125 hover:scale-100 transition-all duration-500 rounded-3xl"
+              />
 
-                <div class="absolute bottom-10 left-10 text-white">
-                  <h3 class="font-bold mb-3 text-2xl w-64">{info.title}</h3>
-                  <p class="mb-8">{info.text}</p>
-                  <span class="font-bold text-xl">Explora</span>
-                </div>
+              <div class="absolute bottom-10 left-5 md:left-10 text-white">
+                <h3 class="font-bold mb-3 text-2xl w-11/12">{info.title}</h3>
+                <p class="mb-8 w-11/12 md:w-full xl:w-11/12 2xl:w-11/12">
+                  {info.text}
+                </p>
+                <span class="font-bold text-xl">Explora</span>
               </div>
             </div>
           );
         })
       }
 
-      <div class="w-[372px] h-[578px] flex flex-col justify-end pb-7">
-        <h3 class="font-bold text-2xl text-[#553000]">
+      <div
+        class="lg:h-[578px] flex flex-col lg:justify-end lg:pb-7 h-max lg:basis-[30%]"
+      >
+        <h3 class="font-bold lg:text-2xl text-xl text-[#553000]">
           ¿Y tú? ¿Tienes algún museo que te gustaría inscribir?
         </h3>
         <p>
