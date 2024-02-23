@@ -1,9 +1,9 @@
 <section>
-  <div class="text-center">
-    <h2 class="mx-auto mb-12">
+  <div class="lg:text-center">
+    <h2 class="mx-auto lg:mb-12 mb-4">
       Homenaje a los Guardianes de Nuestro Patrimonio Cultural
     </h2>
-    <p class="text-2xl font-bold leading-9 w-[42%] mx-auto mb-20">
+    <p class="lg:text-2xl lg:font-bold lg:leading-9 lg:w-[42%] mx-auto lg:mb-20 mb-10">
       Desde la Dirección General de Museos del Ministerio de Cultura, honramos
       la memoria de las y los trabajadores de nuestros museos, quienes a través
       de su esfuerzo, dedicación y calidad humana aportaron al desarrollo del
@@ -62,11 +62,9 @@
 
 <style>
   h2 {
-    font-size: 50px;
     font-weight: 700;
     color: #553000;
-    width: 40%;
-    line-height: 50px;
+    font-size: 20px;
   }
 
   h4 {
@@ -78,5 +76,13 @@
 
   span {
     font-size: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 50px;
+      line-height: 50px;
+      width: 40%;
+    }
   }
 </style>

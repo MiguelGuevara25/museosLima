@@ -1,20 +1,20 @@
 <section>
-  <h2 class="text-[#553000] font-bold text-center text-5xl my-24">
+  <h2 class="text-[#553000] font-bold lg:text-center text-3xl lg:text-5xl lg:my-24 mb-8 my-10">
     Estadísticas de Visitantes
   </h2>
 
-  <div class="flex flex-col items-center gap-8 mb-36">
+  <div class="flex flex-col lg:items-center lg:gap-8 gap-2 lg:mb-36 mb-16">
     <h3>Estadística Mensual</h3>
     <p>
       A través del sistema de gestión de visitantes se lleva un registro mensual
       de público nacional y extranjero que asiste a los museos.
     </p>
-    <div class="w-[629px] h-[629px]">
+    <div class="lg:w-[629px] lg:h-[629px]">
       <img src="/visitanteMuseos.jpg" alt="Visitante Museos" />
     </div>
   </div>
 
-  <div class="flex flex-col items-center gap-8">
+  <div class="flex flex-col lg:items-center lg:gap-8 gap-2">
     <h3>Museos Abiertos</h3>
     <p>
       En el marco de la Ley 30599 y la iniciativa "Museos Abiertos”, desde el
@@ -22,7 +22,7 @@
       el primer domingo de cada mes a los museos administrados por el Estado a
       nivel nacional.
     </p>
-    <div class="w-[629px] h-[629px]">
+    <div class="lg:w-[629px] lg:h-[629px]">
       <img
         src="/visitanteMuseosAbiertos.jpg"
         alt="Visitantes Museos Abiertos"
@@ -38,15 +38,22 @@
   }
 
   p {
-    font-size: 22px;
-    font-weight: bold;
-    width: 535px;
-    text-align: center;
-    margin-bottom: 45px;
+    font-size: 16px;
+    margin-bottom: 35px;
     line-height: 20px;
   }
 
   img {
     border-radius: 30px;
+  }
+
+  @media (min-width: 1024px) {
+    p {
+      font-size: 22px;
+      width: 535px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 45px;
+    }
   }
 </style>
